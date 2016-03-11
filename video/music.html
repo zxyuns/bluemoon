@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num1 = 2; 
+		var num2 = 20; 
+		var num3 = --num1 + num2;      // 等于 21 var num4 = num1 + num2; 
+		console.log(num3);
+		var num4 = num1 + num2;
+		console.log(num4);
+
+
+		var val=1;
+		var obj={x:2};
+		function test(v,b) {
+			v=2;
+			b.x=3;
+		}
+		test(val,obj.x);
+		//test(x,obj);
+		console.log(val,obj);
+	</script>
+</body>
+</html>

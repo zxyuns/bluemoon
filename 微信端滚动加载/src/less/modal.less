@@ -1,0 +1,53 @@
+.weui_dialog, .weui_toast {
+  transition-duration: .3s;
+  opacity: 0;
+  transform: scale(.9);
+  visibility: hidden;
+  margin: 0;
+  left: 7.5%;
+  top: 30%;
+
+  .weui_btn_dialog + .weui_btn_dialog {
+    position: relative;
+    &:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      border-left: 1px solid #D5D5D6;
+      color: #D5D5D6;
+      transform-origin: 0 0;
+      transform: scaleX(0.5);
+    }
+  }
+
+  &.weui_dialog_visible, &.weui_toast_visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+.weui_toast {
+  left: 50%;
+  top: 35%;
+  margin-left: -3.8rem;
+}
+
+.weui_mask {
+  opacity: 0;
+  transition-duration: .3s;
+  visibility: hidden;
+  &.weui_mask_visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.weui_toast {
+  left: 50%;
+  margin-left: -3.8rem;
+  top: 35%;
+}

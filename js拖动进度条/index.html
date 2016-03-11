@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户评分代码</title>
+
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="grade_warp">
+
+	<div class="User_ratings User_grade" id="div_fraction0">
+		<div class="ratings_title01"><p><span>功能</span>-你觉得这个创意在功能上优秀吗？<i>分数越高表示越优秀。</i></p></div>
+		<div class="ratings_bars">
+			<span id="title0">0</span>
+			<span class="bars_10">0</span>
+			<div class="scale" id="bar0">
+				<div></div>
+				<span id="btn0"></span>
+			</div>
+			<span class="bars_10">10</span>
+		</div>
+	</div>
+	
+	<div class="User_ratings User_grade" id="div_fraction1">
+		<div class="ratings_title01"><p><span>外观</span>-你觉得这个创意在外观上优秀吗？<i>分数越高表示越优秀。</i></p></div>
+		<div class="ratings_bars">
+			<span id="title1">0</span>
+			<span class="bars_10">0</span>
+			<div class="scale" id="bar1">
+				<div></div>
+				<span id="btn1"></span>
+			</div>
+			<span class="bars_10">10</span>
+		</div>
+	</div>
+	
+	<div class="User_ratings User_grade" id="div_fraction2">
+		<div class="ratings_title01"><p><span>成本</span>-你觉得这个创意在成本上优秀吗？<i>分数越高表示越优秀。</i></p></div>
+		<div class="ratings_bars">
+			<span id="title2">0</span>
+			<span class="bars_10">0</span>
+			<div class="scale" id="bar2">
+				<div></div>
+				<span id="btn2"></span>
+			</div>
+			<span class="bars_10">10</span>
+		</div>
+	</div>
+	
+	<div class="User_ratings User_grade" id="div_fraction3">
+		<div class="ratings_title01"><p><span>难度</span>-你觉得这个创意在难度上可行吗？<i>分数越高表示越可行。</i></p></div>
+		<div class="ratings_bars">
+			<span id="title3">0</span>
+			<span class="bars_10">0</span>
+			<div class="scale" id="bar3">
+				<div></div>
+				<span id="btn3"></span>
+			</div>
+			<span class="bars_10">10</span>
+		</div>
+	</div>
+	
+	<div class="User_ratings User_grade" id="div_fraction4">
+		<div class="ratings_title01"><p><span>环保</span>-你觉得这个创意在环保上优秀吗？<i>分数越高表示越优秀。</i></p></div>
+		<div class="ratings_bars">
+			<span id="title4">0</span>
+			<span class="bars_10">0</span>
+			<div class="scale" id="bar4">
+				<div></div>
+				<span id="btn4"></span>
+			</div>
+			<span class="bars_10">10</span>
+		</div>
+	</div>
+
+</div>	
+	
+<script type="text/javascript">
+scale = function (btn, bar, title) {
+	this.btn = document.getElementById(btn);
+	this.bar = document.getElementById(bar);
+	this.title = document.getElementById(title);
+	this.step = this.bar.getElementsByTagName("DIV")[0];
+	this.init();
+};
+scale.prototype = {
+	init: function () {
+		var f = this, g = document, b = window, m = Math;
+		f.btn.onmousedown = function (e) {
+			var x = (e || b.event).clientX;
+			var l = this.offsetLeft;
+			var max = f.bar.offsetWidth - this.offsetWidth;
+			g.onmousemove = function (e) {
+				var thisX = (e || b.event).clientX;
+				var to = m.min(max, m.max(-2, l + (thisX - x)));
+				f.btn.style.left = to + 'px';
+				f.ondrag(m.round(m.max(0, to / max) * 100), to);
+				b.getSelection ? b.getSelection().removeAllRanges() : g.selection.empty();
+			};
+			g.onmouseup = new Function('this.onmousemove=null');
+		};
+	},
+	ondrag: function (pos, x) {
+		this.step.style.width = Math.max(0, x) + 'px';
+		this.title.innerHTML = pos / 10 + '';
+	}
+}
+new scale('btn0', 'bar0', 'title0');
+new scale('btn1', 'bar1', 'title1');
+new scale('btn2', 'bar2', 'title2');
+new scale('btn3', 'bar3', 'title3');
+new scale('btn4', 'bar4', 'title4');
+</script>
+                    
+</body>
+</html>

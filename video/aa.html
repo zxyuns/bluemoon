@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    *{margin: 0;padding: 0}
+    #aUL{width: 1000px;height: 30px;}
+    #aUl li{list-style: none;width: 120px;height: 30px;background: red;color: white;
+        border: 1px solid #eeeeee;float: left;line-height: 30px;text-align: center;
+    }
+
+</style>
+<body>
+
+
+<ul id="aUl">
+    <li au="a">1111</li>
+    <li au="b">2222</li>
+    <li au="c">3333</li>
+    <li au="d">4444</li>
+    <li au="e">5555</li>
+    <li au="f">6666</li>
+    <li au="g">7777</li>
+</ul>
+
+<audio id="a1" ></audio>
+
+<script>
+
+    window.onload=function(){
+        var aLi=document.getElementsByTagName("li");
+        var au=document.getElementById("a1");
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].onmousover=function(){
+                au.src = "http://s8.qhimg.com/share/audio/piano1/"+this.getAttribute('au')+"4.mp3";
+               // oA.src = 'http://s8.qhimg.com/share/audio/piano1/'+this.getAttribute('au')+'4.mp3';
+            }
+        }
+    }
+
+    window.onload=function(){
+        
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>jQuery WEUI</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    ">
+
+    <link rel="stylesheet" href="../dist/lib/weui.css">
+    <link rel="stylesheet" href="../dist/css/jquery-weui.css">
+    <script src="../dist/lib/jquery-2.1.4.js"></script>
+    <script src="../dist/js/jquery-weui.js"></script>
+</head>
+<!--说明 阿信  请用谷歌浏览器打开
+    参考地址：http://lihongxun945.github.io/jquery-weui/extends#infinite
+    载入需要的样式文件 js文件
+-->
+<body ontouchstart>
+<div id="list">
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+    <p>fhsaf safaf fdasfadsf</p>
+</div>
+<div class="weui-infinite-scroll" >
+    <div class="infinite-preloader"></div><!-- 菊花 -->
+    正在加载... <!-- 文案，可以自行修改 -->
+</div>
+
+<script>
+   var loading = false;  //状态标记
+    $(document.body).infinite().on("infinite", function() {
+        if(loading) return;
+        loading = true;
+        setTimeout(function() {
+            $("#list").append("<p> 我是新加载的内容 </p>");
+            loading = false;
+        }, 1500);   //模拟延迟
+    });
+
+</script>
+</body>
+</html>

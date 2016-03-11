@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+	<title></title>
+</head>
+<body>
+	<video id="v1">
+
+	<source src="Intermission-Walk-in.ogv"></source>
+    <source src="Intermission-Walk-in_512kb.mp4"></source>
+
+</video><br />
+<input type="button" value="播放" />
+<input type="button" value="00:00:00" />
+<input type="button" value="00:00:00" />
+<input type="button" value="静音" />
+<input type="button" value="全屏" />
+
+
+<script>
+
+window.onload = function(){
+	var oV = document.getElementById('v1');
+	var aInput = document.getElementsByTagName('input');
+	
+	var timer = null;
+	
+	aInput[0].onclick = function(){
+		
+		if( oV.paused ){
+			
+			oV.play();
+			
+			this.value = '暂停';
+			
+			nowTime();
+			timer = setInterval(nowTime,1000);
+			
+		}
+		else{
+			
+			oV.pause();
+			
+			this.value = '播放';
+			
+			clearInterval(timer);
+			
+		}
+		
+	};
+	
+	
+	aInput[2].value = changeTime(oV.duration);
+	
+	aInput[3].onclick = function(){
+		
+		
+		if( oV.muted ){
+			
+			oV.volume = 1;
+			
+			this.value = '静音';
+			
+			oV.muted = false;
+			
+		}
+		else{
+			
+			oV.volume = 0;
+			
+			this.value = '取消静音';
+			
+			oV.muted = true;
+			
+		}
+		
+	};
+	
+	aInput[4].onclick = function(){
+		oV.mozRequestFullScreen();
+	};
+	
+	
+	function nowTime(){
+		
+		aInput[1].value = changeTime(oV.currentTime);
+		
+	}
+	
+	
+	function changeTime(iNum){
+		
+		iNum = parseInt( iNum );
+		
+		var iH = toZero(Math.floor(iNum/3600));
+		var iM = toZero(Math.floor(iNum%3600/60));
+		var iS = toZero(Math.floor(iNum%60));
+		
+		return iH + ':' +iM + ':' + iS;
+		
+	}
+	
+	function toZero(num){
+		if(num<=9){
+			return '0' + num;
+		}
+		else{
+			return '' + num;
+		}
+	}
+	
+};
+
+</script>
+</body>
+</html>
+

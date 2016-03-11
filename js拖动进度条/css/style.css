@@ -1,0 +1,32 @@
+﻿@charset "utf-8";/* CSS Document */
+body{margin:0;padding:0;font-family:"宋体";background:#fff;}
+a,a:hover{text-decoration:none;cursor: pointer;outline:none;}
+ul{list-style:none;}
+
+/*用户评分*/
+.grade_warp{width:840px;margin:10px auto 15px auto;}
+.User_grade{width:420px;margin: auto auto 10px auto;overflow:hidden;float:left;}
+.User_ratings .ratings_title{width:815px;height:78px;font-family:"微软雅黑","宋体";font-size:24px;color:#aaaaaa;}
+.User_ratings .ratings_title01{width:407px;height:auto;font-family:"微软雅黑","宋体";font-size:14px;color:#aaaaaa;}
+.User_ratings .ratings_title p{float:left;}
+.User_ratings .ratings_title p span{font-size:48px;}
+.User_ratings .ratings_title p i{color:#7dc234;font-style:normal;}
+.User_ratings .ratings_title01 p span{font-size:18px;}
+.User_ratings .ratings_title01 p i{color:#7dc234;font-style:normal;}
+.User_ratings .ratings_title01 input{width:120px;height:48px;border:0;margin:15px auto auto 45px;float:left;background:url(../images/batton_01.png) -202px -2441px no-repeat;}
+.User_ratings .ratings_title01 input:hover{background:url(../images/batton_01.png) -202px -2489px no-repeat;}
+.User_ratings .ratings_title01 input01{background:url(../images/batton_01.png) -202px -2537px no-repeat;}
+.User_ratings .ratings_title input{width:120px;height:48px;border:0;margin:15px auto auto 45px;float:left;background:url(../images/batton_01.png) -202px -2441px no-repeat;}
+.User_ratings .ratings_title input:hover{background:url(../images/batton_01.png) -202px -2489px no-repeat;}
+.User_ratings .ratings_title input01{background:url(../images/batton_01.png) -202px -2537px no-repeat;}
+.User_ratings .ratings_bars{width:407px;height:27px;margin-top:10px;float:left;}
+.User_ratings .ratings_bars #title0{width:25px;height:25px;text-align:center;border:1px solid #bfbebe;line-height:25px;font-family:Georgia, "Times New Roman", Times, serif;font-size:14px;float:left;color:#a0a0a0;margin-right:10px;background:#fff;}
+.User_ratings .ratings_bars #title1{width:25px;height:25px;text-align:center;border:1px solid #bfbebe;line-height:25px;font-family:Georgia, "Times New Roman", Times, serif;font-size:14px;float:left;color:#a0a0a0;margin-right:10px;background:#fff;}
+.User_ratings .ratings_bars #title2{width:25px;height:25px;text-align:center;border:1px solid #bfbebe;line-height:25px;font-family:Georgia, "Times New Roman", Times, serif;font-size:14px;float:left;color:#a0a0a0;margin-right:10px;background:#fff;}
+.User_ratings .ratings_bars #title3{width:25px;height:25px;text-align:center;border:1px solid #bfbebe;line-height:25px;font-family:Georgia, "Times New Roman", Times, serif;font-size:14px;float:left;color:#a0a0a0;margin-right:10px;background:#fff;}
+.User_ratings .ratings_bars #title4{width:25px;height:25px;text-align:center;border:1px solid #bfbebe;line-height:25px;font-family:Georgia, "Times New Roman", Times, serif;font-size:14px;float:left;color:#a0a0a0;margin-right:10px;background:#fff;}
+.User_ratings .ratings_bars .bars_10{font-family:Georgia, "Times New Roman", Times, serif;font-size:18px;line-height:25px;float:left;color:#a0a0a0;}
+.User_ratings .ratings_bars .scale{width:299px;height:13px;float:left;margin:7px 10px auto 10px;position:relative;background:url(../images/progress02.png) 0 0 no-repeat;}
+.User_ratings .ratings_bars .scale div{width:0px;position:absolute;width:0;left:0;height:13px;bottom:0;background:url(../images/progress02.png) 0 -14px no-repeat;}
+.User_ratings .ratings_bars .scale span{width:10px;height:26px;position:absolute;left:-2px;top:-7px;cursor:pointer;background:url(../images/j.png) no-repeat;}
+

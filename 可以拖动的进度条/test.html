@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="css/bootstrap-slider.css">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+
+
+    <style type='text/css'>
+        /* Example 1 custom styles */
+        #ex1Slider .slider-selection {
+            background: #BABABA;
+        }
+
+        /* Example 3 custom styles */
+        #RGB {
+            height: 20px;
+            background: rgb(128, 128, 128);
+        }
+        #RC .slider-selection {
+            background: #FF8282;
+        }
+        #RC .slider-handle {
+            background: red;
+        }
+        #GC .slider-selection {
+            background: #428041;
+        }
+        #GC .slider-handle {
+            background: green;
+        }
+        #BC .slider-selection {
+            background: #8283FF;
+        }
+        #BC .slider-handle {
+            border-bottom-color: blue;
+        }
+        #R, #G, #B {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div style="margin-top: 260px;padding-top:360px;background: #fffddd;margin: 0 auto;width: 800px;">
+    <!--<input id="ex8" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/>-->
+    <div class="well">
+        <input id="ex8" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="1"/>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="js/bootstrap-slider.js"></script>
+<script>
+    // With JQuery
+    /*$("#ex8").slider({
+        tooltip: 'always'
+    });*/
+    $("#ex8").slider({
+        tooltip: 'always',
+        precision: 2,//两位小数
+        value: 8.115 // Slider will instantiate showing 8.12 due to specified precision
+    });
+    //Slider.setValue();
+
+    // Without JQuery
+//    var slider = new Slider("#ex8", {
+//        tooltip: 'always'
+//    });
+</script>
+</body>
+</html>
