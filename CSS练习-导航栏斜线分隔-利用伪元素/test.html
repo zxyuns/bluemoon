@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .header_right{width:1200px;background: #050506;color: #ffffff;height: 50px;line-height: 50px;margin: 0 auto;}
+        .fr a{color: #ffffff;display: block;float: left;}
+        a{
+            text-decoration:none;
+        }
+        或者把这个属性分别加到a标签下，
+        a:link{
+            text-decoration:none;
+        }
+        a:visited{
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration:none;
+        }
+        a:active{
+            text-decoration:none;
+        }
+        .link:before{content: "/";margin:0 24px;color: grey;}
+        .link:first-child:before{display:none;}
+    </style>
+</head>
+<body>
+<!-- 导航栏begin -->
+<div class="header_right fr">
+    <a href="#" class="link">Home</a>
+    <a href="#" class="link">About</a>
+    <a href="#" class="link">Features</a>
+    <a href="#" class="link">Blog</a>
+    <a href="#" class="link">Shop</a>
+    <div class="alarm fr">
+        <img src="./images/alarm.png" alt="alarm" /></images><i class="alarm_number">2</i>
+    </div>
+</div>
+<!-- 导航栏end -->
+</body>
+</html>
