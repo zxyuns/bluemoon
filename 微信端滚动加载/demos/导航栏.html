@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>导航栏测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/lib/weui.css">
+    <link rel="stylesheet" href="../dist/css/jquery-weui.css">
+    <script src="../dist/lib/jquery-2.1.4.js"></script>
+    <script src="../dist/js/jquery-weui.js"></script>
+
+
+    <style>
+
+        .weui_navbar_item.weui_bar_item_on {
+            background-color: #46fff2;
+        }
+    </style>
+</head>
+<body>
+<div class="weui_tab">
+    <div class="weui_navbar">
+        <a class="weui_navbar_item weui_bar_item_on">
+            选项一
+        </a>
+        <a class="weui_navbar_item">
+            选项二
+        </a>
+        <a class="weui_navbar_item">
+            选项三
+        </a>
+    </div>
+    <div class="weui_tab_bd">
+        <p>主体内容放这里</p>
+    </div>
+</div>
+
+<script>
+    $(function() {
+
+        var i=0;
+        $(".weui_navbar a").bind("click", function(){
+
+            //css操作
+            alert(i++);
+            $(".weui_bar_item_on").removeClass('weui_bar_item_on');
+            //console.log($(this).find("a"));
+            $(this).addClass("weui_bar_item_on");
+
+        });
+    });
+
+</script>
+</body>
+</html>

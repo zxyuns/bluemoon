@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{}
+        canvas{color: #fff;width: 400px;height: 400px;}
+    </style>
+
+</head>
+<body>
+<canvas id="c1">
+
+</canvas>
+
+
+<script>
+    window.onload=function(){
+        var oC =document.getElementById("c1");
+        var oGC =oC.getContext("2d");
+        //fillStyle 方法将其染成红色，fillRect 方法规定了形状、位置和尺寸
+        // oGC.fillStyle="#FF0000";
+        //oGC.fillRect(30,30,150,75);//区块
+        oGC.strokeRect(30.5,30.5,150,75);//1px
+        oGC.strokeRect(30,30,150,75);//填充了0.5px;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{background: #ededed;}
+        canvas{color: red;width: 400px;height: 400px;}
+    </style>
+
+</head>
+<body>
+<canvas id="c1">
+
+</canvas>
+
+
+<script>
+    window.onload=function(){
+        var oC =document.getElementById("c1");
+        var oGC =oC.getContext("2d");
+
+        oGC.save();
+        oGC.fillStyle="red";
+        oGC.beginPath();
+        oGC.moveTo(50,50);
+        oGC.lineTo(100,100);
+        oGC.lineTo(200,100);
+        oGC.closePath();
+        oGC.fill();
+        oGC.restore();
+
+        oGC.beginPath();
+        oGC.moveTo(50,100);
+        oGC.lineTo(100,200);
+        oGC.lineTo(300,200);
+        oGC.closePath();
+        oGC.stroke();
+        oGC.fill();
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>导航栏测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/lib/weui.css">
+    <link rel="stylesheet" href="../dist/css/jquery-weui.css">
+    <script src="../dist/lib/jquery-2.1.4.js"></script>
+    <script src="../dist/js/jquery-weui.js"></script>
+
+
+    <style>
+
+        .weui_navbar_item.weui_bar_item_on {
+            background-color: #46fff2;
+        }
+    </style>
+</head>
+<body>
+<div class="weui_tab">
+    <div class="weui_navbar">
+        <a href="#tab1" class="weui_navbar_item weui_bar_item_on">
+            选项一
+        </a>
+        <a href="#tab2" class="weui_navbar_item">
+            选项二
+        </a>
+        <a href="#tab3" class="weui_navbar_item">
+            选项三
+        </a>
+    </div>
+    <!--<div class="weui_tab_bd">
+        <p>主体内容放这里</p>
+    </div>-->
+
+    <style>
+        .clear{clear: both;}
+        .margin_50{margin-top: 52px;}
+        .pad_6{padding-left: 6px;padding-right: 6px;}
+        .mag_item{width: 100%;height: auto;}
+        .mag_item img{width: 100%;height: auto;border: 0;}
+    </style>
+    <div class="clear margin_50"></div>
+    <div class="weui_tab_bd">
+        <div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active pad_6">
+           <div class="mag_item">
+                <img src="images/coubg.png" >
+                <p>网络上有很多这样的视频教程，如果大家有好的，也可以丢到这个盘里面</p>
+           </div>
+
+            <div class="mag_item">
+                <img src="images/coubg.png">
+                <p>网络上有很多这样的视频教程，如果大家有好的，也可以丢到这个盘里面</p>
+            </div>
+
+            <div class="mag_item">
+                <img src="images/coubg.png" >
+                <p>网络上有很多这样的视频教程，如果大家有好的，也可以丢到这个盘里面</p>
+            </div>
+        </div>
+        <div id="tab2" class="weui_tab_bd_item">
+            <h1 class="doc-head">通讯录</h1>
+        </div>
+        <div id="tab3" class="weui_tab_bd_item">
+            <h1 class="doc-head">发现</h1>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function() {
+
+        var i=0;
+        $(".weui_navbar a").bind("click", function(){
+
+            //css操作
+            alert(i++);
+            //操作导航栏
+            $(".weui_bar_item_on").removeClass('weui_bar_item_on');
+            //console.log($(this).find("a"));
+            $(this).addClass("weui_bar_item_on");
+
+            //操作内容切换
+            $(".weui_tab_bd .weui_tab_bd_item_active").removeClass('weui_tab_bd_item_active');
+            var data_toggle =jQuery(this).attr("href");
+            $(data_toggle).addClass("weui_tab_bd_item_active");
+           // $(this).addClass("weui_tab_bd_item_active");
+
+        });
+    });
+
+</script>
+</body>
+</html>
